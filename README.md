@@ -1,160 +1,91 @@
-![Video.js logo][logo]
+# Report for Assignment 1
 
-# [Video.js - HTML5 Video Player][vjs]
+## Project chosen
 
-[![Build Status][travis-icon]][travis-link]
-[![Coverage Status][coveralls-icon]][coveralls-link]
-[![Greenkeeper badge](https://badges.greenkeeper.io/videojs/video.js.svg)](https://greenkeeper.io/)
-[![Slack Status][slack-icon]][slack-link]
+Name: video.js
 
-[![NPM][npm-icon]][npm-link]
+URL: https://github.com/videojs/video.js
 
-> Video.js is a web video player built from the ground up for an HTML5 world. It supports HTML5 video and Media Source Extensions, as well as other playback techs like YouTube and Vimeo (through [plugins][plugins]). It supports video playback on desktops and mobile devices. This project was started mid 2010, and the player is now used on over ~~50,000~~ ~~100,000~~ ~~200,000~~ ~~400,000~~ [700,000 websites][builtwith].
+Number of lines of code and the tool used to count it: 68299
 
-## Table of Contents
+Programming language: JavaScript
 
-* [Quick Start](#quick-start)
-* [Contributing](#contributing)
-* [Code of Conduct](#code-of-conduct)
-* [License](#license)
+## Coverage measurement
 
-## Quick Start
+### Existing tool
+The existing coverage tool that we use for this project is Istanbul. The coverage of this tool has already been implemented in the project and what we have to do is to enable the coverage tool on.
 
-Thanks to the awesome folks over at [Fastly][fastly], there's a free, CDN hosted version of Video.js that anyone can use. Add these tags to your document's `<head>`:
+After digging around and getting some basic knowledge and intuition about the project, we figured out the way to enable the test procedure to return the coverage report under the HTML format:
 
-```html
-<link href="//vjs.zencdn.net/8.3.0/video-js.min.css" rel="stylesheet">
-<script src="//vjs.zencdn.net/8.3.0/video.min.js"></script>
-```
+In both rollup.config.js and karma.conf.js files:
 
-> For the latest version of video.js and URLs to use, check out the [Getting Started][getting-started] page on our website.
+This is the initial value of const CI_TEST_TYPE:
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/t%E1%BA%A3i%20xu%E1%BB%91ng%20(1).jpeg)
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/t%E1%BA%A3i%20xu%E1%BB%91ng.jpeg)
 
-Video.js version 7 (and newer) CDN builds do not send any data to Google Analytics.
+In order to enable the report coverage to be returned, we change the value of this constant into the string: ‘coverage’
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/t%E1%BA%A3i%20xu%E1%BB%91ng%20(2).jpeg)
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/t%E1%BA%A3i%20xu%E1%BB%91ng%20(3).jpeg)
 
-In older versions of Video.js (6 and earlier), in the `vjs.zencdn.net` CDN-hosted versions we include a [stripped down Google Analytics pixel](https://github.com/videojs/cdn/blob/master/src/analytics.js) that tracks a random sampling (currently 1%) of players loaded from the CDN. This allows us to see (roughly) what browsers are in use in the wild, along with other useful metrics such as OS and device. If you'd like to disable analytics, you can simply include the following global before including Video.js via the free CDN:
+After reassigning new value to the const CI_TEST_TYPE, we can simply run the command: 
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/t%E1%BA%A3i%20xu%E1%BB%91ng%20(4).jpeg)
 
-```html
-<script>window.HELP_IMPROVE_VIDEOJS = false;</script>
-```
 
-Alternatively, you can include Video.js by getting it from [npm](https://videojs.com/getting-started/#install-via-npm), downloading from [GitHub releases](https://github.com/videojs/video.js/releases) or by including it via [unpkg](https://unpkg.com) or another JavaScript CDN like CDNjs. These releases _do not_ include Google Analytics tracking at all.
+This command starts cleaning all already built folders, then it lints all the source/test files to ensure conventions are maintained. Accordingly, the build of the system runs and all test units are executed.  
 
-```html
-<!-- unpkg : use the latest version of Video.js -->
-<link href="https://unpkg.com/video.js/dist/video-js.min.css" rel="stylesheet">
-<script src="https://unpkg.com/video.js/dist/video.min.js"></script>
+This is the coverage report that we received after running all unit tests.
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/t%E1%BA%A3i%20xu%E1%BB%91ng%20(5).jpeg)
 
-<!-- unpkg : use a specific version of Video.js (change the version numbers as necessary) -->
-<link href="https://unpkg.com/video.js@8.3.0/dist/video-js.min.css" rel="stylesheet">
-<script src="https://unpkg.com/video.js@8.3.0/dist/video.min.js"></script>
+### Your own coverage tool
 
-<!-- cdnjs : use a specific version of Video.js (change the version numbers as necessary) -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/8.3.0/video-js.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/8.3.0/video.min.js"></script>
-```
+** Nguyen Duc Thinh
+### Your own coverage tool
+Function 1: textContent() function in src/js/utils/dom.js
 
-Next, using Video.js is as simple as creating a `<video>` element, but with an additional `data-setup` attribute. At a minimum, this attribute must have a value of `'{}'`, but it can include any Video.js [options][options] - just make sure it contains valid JSON!
+The original code:
 
-```html
-<video
-    id="my-player"
-    class="video-js"
-    controls
-    preload="auto"
-    poster="//vjs.zencdn.net/v/oceans.png"
-    data-setup='{}'>
-  <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4"></source>
-  <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm"></source>
-  <source src="//vjs.zencdn.net/v/oceans.ogv" type="video/ogg"></source>
-  <p class="vjs-no-js">
-    To view this video please enable JavaScript, and consider upgrading to a
-    web browser that
-    <a href="https://videojs.com/html5-video-support/" target="_blank">
-      supports HTML5 video
-    </a>
-  </p>
-</video>
-```
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/t%E1%BA%A3i%20xu%E1%BB%91ng%20(6).jpeg)
 
-When the page loads, Video.js will find this element and automatically setup a player in its place.
+The instrument code:
 
-If you don't want to use automatic setup, you can leave off the `data-setup` attribute and initialize a `<video>` element manually using the `videojs` function:
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/t%E1%BA%A3i%20xu%E1%BB%91ng%20(7).jpeg)
 
-```js
-var player = videojs('my-player');
-```
+My coverage tool and existing tool print before having test case:
 
-The `videojs` function also accepts an `options` object and a callback to be invoked
- when the player is ready:
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/t%E1%BA%A3i%20xu%E1%BB%91ng%20(8).jpeg)
 
-```js
-var options = {};
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/t%E1%BA%A3i%20xu%E1%BB%91ng%20(9).jpeg)
 
-var player = videojs('my-player', options, function onPlayerReady() {
-  videojs.log('Your player is ready!');
+As we see, the branch1 did not hit so I will create a test case for type of textContent = undefined:
 
-  // In this context, `this` is the player that was created by Video.js.
-  this.play();
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448460018_1130320471384099_2100954714234095212_n%20(1).png)
 
-  // How about an event listener?
-  this.on('ended', function() {
-    videojs.log('Awww...over so soon?!');
-  });
-});
-```
+And the final result:
 
-If you're ready to dive in, the [Getting Started][getting-started] page and [documentation][docs] are the best places to go for more information. If you get stuck, head over to our [Slack channel][slack-link]!
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448368679_2201176123572680_2867262525276031485_n.png)
 
-## Contributing
+Function 2: handleKeyDown() function in src/js/close-button.js
 
-Video.js is a free and open source library, and we appreciate any help you're willing to give - whether it's fixing bugs, improving documentation, or suggesting new features. Check out the [contributing guide][contributing] for more!
+The original function:
 
-_Video.js uses [BrowserStack][browserstack] for compatibility testing._
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448973953_380649091231315_6296111906017772069_n.png)
 
-## [Code of Conduct][coc]
+The instrument function:
 
-Please note that this project is released with a [Contributor Code of Conduct][coc]. By participating in this project you agree to abide by its terms.
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448810704_699166539002465_3954360496719867065_n.png)
 
-## [License][license]
+My coverage print before having test case:
 
-Video.js is [licensed][license] under the Apache License, Version 2.0.
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448143940_976195600965576_250459141868192700_n.png)
 
-[browserstack]: https://browserstack.com
+The existing coverage tool for handleKeyDown() function:
 
-[builtwith]: https://trends.builtwith.com/media/VideoJS
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448136007_891654652797813_8153759499089083295_n.png)
 
-[contributing]: CONTRIBUTING.md
+As we see, the branch2 did not hit so I will create the test case for branch 2:
 
-[coveralls-icon]: https://coveralls.io/repos/github/videojs/video.js/badge.svg?branch=main
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448146235_1542578716297224_6913728353682836637_n.png)
 
-[coveralls-link]: https://coveralls.io/github/videojs/video.js?branch=main
+And the final result:
 
-[docs]: https://docs.videojs.com
-
-[fastly]: https://www.fastly.com/
-
-[getting-started]: https://videojs.com/getting-started/
-
-[license]: LICENSE
-
-[logo]: https://videojs.com/logo-white.png
-
-[npm-icon]: https://nodei.co/npm/video.js.png?downloads=true&downloadRank=true
-
-[npm-link]: https://nodei.co/npm/video.js/
-
-[options]: https://videojs.com/guides/options/
-
-[plugins]: https://videojs.com/plugins/
-
-[slack-icon]: http://slack.videojs.com/badge.svg
-
-[slack-link]: http://slack.videojs.com
-
-[travis-icon]: https://travis-ci.org/videojs/video.js.svg?branch=main
-
-[travis-link]: https://travis-ci.org/videojs/video.js
-
-[vjs]: https://videojs.com
-
-[coc]: CODE_OF_CONDUCT.md
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448124933_1036206201179945_4086439768278396142_n.png)
