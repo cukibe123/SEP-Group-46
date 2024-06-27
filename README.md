@@ -206,7 +206,7 @@ This coverage was basically the same and two tests was included to cover the cas
 ##### Test 1:
 This is the image of the new implemented test:
 
-![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448368679_2201176123572680_2867262525276031485_n.png)
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448460018_1130320471384099_2100954714234095212_n%20(1).png)
 
 Old Coverage Results:
 
@@ -214,7 +214,7 @@ Old Coverage Results:
 
 New Coverage Results:
 
-https://github.com/thinhrick0101/demo/blob/main/448368679_2201176123572680_2867262525276031485_n.png)
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448368679_2201176123572680_2867262525276031485_n.png)
 
 ##### Test 2:
 
@@ -229,10 +229,6 @@ Old Coverage Results:
 New Coverage Results:
 
 ![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448124933_1036206201179945_4086439768278396142_n.png)
-
-The existing coverage tool for handleKeyDown() function:
-
-![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448136007_891654652797813_8153759499089083295_n.png)
 
 ## Statement of individual contributions
 
