@@ -3,6 +3,7 @@ import * as middleware from '../../../src/js/tech/middleware.js';
 import sinon from 'sinon';
 import window from 'global/window';
 import _ from 'lodash';
+import { exportCoverage } from '../../../src/js/tech/middleware.js';
 
 QUnit.module('Middleware', {
   beforeEach(assert) {
@@ -545,4 +546,6 @@ QUnit.test('getMiddleware()_test', function(assert) {
   const middlewares = {'*': [], 'foo': [], 'video/bar': [], 'video/foo': []};
 
   assert.ok(_.isEqual(middlewares, middleware.getMiddleware(type)), 'The object should be empty');
+
+  exportCoverage();
 });
