@@ -144,7 +144,7 @@ The existing coverage tool for handleKeyDown() function:
 
 #### Tuan An Hoang
 
-##### Test 1: handleKeyDown()_button
+##### Test 1:
 This is the new implemented test case:
 ![new_test](https://github.com/cukibe123/images/blob/main/button_test.jpg)
 
@@ -158,7 +158,7 @@ This is the new coverage result:
 
 You can see that the first branch now was hit by the test. The branch coverage of this function has increased from 50% (½) to 100% after the creation of this test case. The coverage is improved because the new test case manipulates the input to trigger an event via the “Enter” button, therefore, the first branch statement is passed. 
 
-##### Test 2: handleKeyDown()_clickable-component
+##### Test 2:
 This is the new implemented test case:
 ![new_test](https://github.com/cukibe123/images/blob/main/clickable-component-test.jpg)
 
@@ -187,7 +187,7 @@ New Coverage Results:
 
 The previous version of the test file did not cover the situation where the ESC or Tab was pressed. What we did was simply add tests in. The function coverage was 0% and we got it up to 85%.
 
-##### <Test 2>
+##### Test 2:
 
 This is the link to the new enhanced test cases: [test/unit/menu.test.js](https://github.com/cukibe123/SEP-Group-46/commit/e9ab648893a67a62dcc9073888fb5aa9e687051d)
 
