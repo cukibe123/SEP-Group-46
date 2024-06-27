@@ -252,13 +252,54 @@ New Coverage Results:
 
 ![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448124933_1036206201179945_4086439768278396142_n.png)
 
+#### Hoang Minh Phan
+
+##### Test 1:
+Code difference of the new implemented test for handleKeyDown() in menu.js:
+![Description of the image](https://github.com/cukibe123/SEP-Group-46/blob/main/minhimages/menujsNewTest.png)
+
+The existing coverage tool's report before the addition of the new test:
+![Description of the image](https://github.com/cukibe123/SEP-Group-46/blob/main/minhimages/menujsCoverageUncovered.png)
+
+The existing coverage tool's report after the addition of the new test:
+![Description of the image](https://github.com/cukibe123/SEP-Group-46/blob/main/minhimages/menujsCoverageCovered.png)
+
+The log from the implementation of the new coverage tool before the addition of the new test:
+![Description of the image](https://github.com/cukibe123/SEP-Group-46/blob/main/minhimages/menujsLogUncovered.png)
+
+The log from the implementation of the new coverage tool after the addition of the new test:
+![Description of the image](https://github.com/cukibe123/SEP-Group-46/blob/main/minhimages/menuLogCovered.png)
+
+The coverage improvement of this function is from 0% to 100%, because the function was not tested at all, and the newly added test covered all branches of this function.
+
+##### Test 2:
+Code difference of the new implemented test for getMiddleware() in menu.js:
+![Description of the image](https://github.com/cukibe123/SEP-Group-46/blob/main/minhimages/middlewarejsNewTest.png)
+
+The existing coverage tool's report before the addition of the new test:
+![Description of the image](https://github.com/cukibe123/SEP-Group-46/blob/main/minhimages/middlewarejsCoverageUncovered.png)
+
+The existing coverage tool's report after the addition of the new test:
+![Description of the image](https://github.com/cukibe123/SEP-Group-46/blob/main/minhimages/menujsCoverageCovered.png)
+
+The log from the implementation of the new coverage tool before the addition of the new test:
+![Description of the image](https://github.com/cukibe123/SEP-Group-46/blob/main/minhimages/middlewarejsLogUncovered.png)
+
+The log from the implementation of the new coverage tool after the addition of the new test:
+![Description of the image](https://github.com/cukibe123/SEP-Group-46/blob/main/minhimages/middlewareLogCovered.png)
+
+The coverage improvement of this function is 50% to 100%, as the function had been tested on 1 out of 2 branches. The newly added test made sure than both branches of this function are covered.
+
 ## Statement of individual contributions
 
 #### Tuan An Hoang
-I implemented the instrumentation for two handleKeyDown() functions of src/button.js and src/clickable-component.js and also created new test cases for these two function to improve branch coverage from 50% to 100%.
+I implemented the instrumentation for two handleKeyDown() functions of src/js/button.js and src/clickable-component.js and also created new test cases for these two function to improve branch coverage from 50% to 100%.
 
 #### Hieu Nguyen Viet 
 I looked through the functions and found 2 similar ones to deal with. It was obvious what the problem was when the cases of pressing ESC and TAB was not covered. I took the previous tests that the owners made as examples and went along with it. I wrote down all the branches that was included in the code and created tests for each of those branch.
 
 #### Duc Thinh Nguyen
 Find 2 function untested, ones is textCont() function in src/js/utils/dom.js and ones is handleKeYDown() function in src/js/close_button.js, made coverage tracks for them and create test cases to improve branch coverage.
+
+#### Hoang Minh Phan
+Figuring out how to use the coverage tool for this Github project, implemented the new coverage tool for the handleKeyDown() function of src/js/menu/menus.js and getMiddleware() in src/js/tech/middleware.js and added new tests for those functions.
