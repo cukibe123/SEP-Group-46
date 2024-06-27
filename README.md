@@ -103,6 +103,43 @@ Coverage results:
 
 ![coverageSubMenu](hieuimgs/coverageSubMenu.png)
 
+#### Nguyen Duc Thinh
+
+##### Function 1: textContent() function in src/js/utils/dom.js
+
+The original code:
+
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/t%E1%BA%A3i%20xu%E1%BB%91ng%20(6).jpeg)
+
+The instrument code:
+
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/t%E1%BA%A3i%20xu%E1%BB%91ng%20(7).jpeg)
+
+My coverage tool and existing tool print before having test case:
+
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/t%E1%BA%A3i%20xu%E1%BB%91ng%20(8).jpeg)
+
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/t%E1%BA%A3i%20xu%E1%BB%91ng%20(9).jpeg)
+
+##### Function 2: handleKeyDown() function in src/js/close-button.js
+
+The original function:
+
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448973953_380649091231315_6296111906017772069_n.png)
+
+The instrument function:
+
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448810704_699166539002465_3954360496719867065_n.png)
+
+My coverage print before having test case:
+
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448143940_976195600965576_250459141868192700_n.png)
+
+The existing coverage tool for handleKeyDown() function:
+
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448136007_891654652797813_8153759499089083295_n.png)
+
+
 ### Coverage Improvement
 
 #### Tuan An Hoang
@@ -164,6 +201,38 @@ New Coverage Results:
 
 This coverage was basically the same and two tests was included to cover the cases where ESC or Tab is pressed. The coverage went from 0% to 90%.
 ****
+#### Duc Thinh Nguyen
+
+##### Test 1:
+This is the image of the new implemented test:
+
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448368679_2201176123572680_2867262525276031485_n.png)
+
+Old Coverage Results:
+
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448143940_976195600965576_250459141868192700_n.png)
+
+New Coverage Results:
+
+https://github.com/thinhrick0101/demo/blob/main/448368679_2201176123572680_2867262525276031485_n.png)
+
+##### Test 2:
+
+This is the image of the new implemented test:
+
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448146235_1542578716297224_6913728353682836637_n.png)
+
+Old Coverage Results:
+
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448143940_976195600965576_250459141868192700_n.png)
+
+New Coverage Results:
+
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448124933_1036206201179945_4086439768278396142_n.png)
+
+The existing coverage tool for handleKeyDown() function:
+
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448136007_891654652797813_8153759499089083295_n.png)
 
 ## Statement of individual contributions
 
