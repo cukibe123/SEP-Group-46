@@ -71,7 +71,7 @@ This is the evidence showing that the function is not fully covered in the origi
 
 #### Hieu Nguyen Viet
 
-##### Function 1: handleKeydown() in menu-button.js
+##### Function 1: handleKeydown() in src/js/menu/menu-button.js
 
 The code before the instrumentation:
 
@@ -87,7 +87,7 @@ Coverage results:
 
 ![coverageResKeyDown](hieuimgs/coverageResKeyDownBe4.png)
 
-##### Function 2: handleSubmenuKeyDown() in menu-button.js
+##### Function 2: handleSubmenuKeyDown() in src/js/menu/menu-button.js
 
 The code before the instrumentation:
 
@@ -178,7 +178,7 @@ This is the new coverage result:
 
 ![new_coverage](https://github.com/cukibe123/images/blob/main/button_after__new_tests.jpg)
 
-You can see that the first branch now was hit by the test. The branch coverage of this function has increased from 50% (½) to 100% after the creation of this test case. The coverage is improved because the new test case manipulates the input to trigger an event via the “Enter” button, therefore, the first branch statement is passed. 
+You can see that the first branch now was hit by the test. The branch coverage of this function has increased from 50% (½) to 100% after the creation of this test case. The coverage is improved because the new test case manipulates the input to trigger an event via the “Enter” button, therefore, the first branch statement is passed.
 
 ##### Test 2:
 This is the new implemented test case:
