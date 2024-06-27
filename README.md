@@ -210,7 +210,7 @@ This is the image of the new implemented test:
 
 Old Coverage Results:
 
-![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448143940_976195600965576_250459141868192700_n.png)
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/t%E1%BA%A3i%20xu%E1%BB%91ng%20(8).jpeg)
 
 New Coverage Results:
 
@@ -239,3 +239,4 @@ I implemented the instrumentation for two handleKeyDown() functions of src/butto
 I looked through the functions and found 2 similar ones to deal with. It was obvious what the problem was when the cases of pressing ESC and TAB was not covered. I took the previous tests that the owners made as examples and went along with it. I wrote down all the branches that was included in the code and created tests for each of those branch.
 
 #### Duc Thinh Nguyen
+Find 2 function untested, ones is textCont() function in src/js/utils/dom.js and ones is handleKeYDown() function in src/js/close_button.js, made coverage tracks for them and create test cases to improve branch coverage.
