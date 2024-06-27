@@ -238,6 +238,8 @@ New Coverage Results:
 
 ![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448368679_2201176123572680_2867262525276031485_n.png)
 
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448535527_1122310602174790_6604326307827412965_n.png)
+
 ##### Test 2:
 
 This is the image of the new implemented test:
@@ -251,6 +253,8 @@ Old Coverage Results:
 New Coverage Results:
 
 ![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448124933_1036206201179945_4086439768278396142_n.png)
+
+![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448244735_1451331618829004_7403684737113227313_n.png)
 
 #### Hoang Minh Phan
 
