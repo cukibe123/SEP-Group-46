@@ -139,6 +139,28 @@ The existing coverage tool for handleKeyDown() function:
 
 ![Description of the image](https://github.com/thinhrick0101/demo/blob/main/448136007_891654652797813_8153759499089083295_n.png)
 
+#### Hoang Minh Phan
+##### Function 1: handleKeyDown() in src/js/menu/menu.js
+
+The existing coverage tool's report on this function:
+![Description of the image](https://github.com/cukibe123/SEP-Group-46/blob/main/minhimages/menujsCoverageUncovered.png)
+
+The code difference of the implementation of new the coverage tool:
+![Description of the image](https://github.com/cukibe123/SEP-Group-46/blob/main/minhimages/menujsFuncCovCodeDiff.png?raw=true)
+
+The log report of the new coverage tool:
+![Description of the image](https://github.com/cukibe123/SEP-Group-46/blob/main/minhimages/menujsLogUncovered.png)
+
+##### Function 2: getMiddleware() in src/js/tech/middleware.js
+
+The existing coverage tool's report on this function:
+![Description of the image](https://github.com/cukibe123/SEP-Group-46/blob/main/minhimages/middlewarejsCoverageUncovered.png)
+
+The code difference of the implementation of new the coverage tool:
+![Description of the image](https://github.com/cukibe123/SEP-Group-46/blob/main/minhimages/middlwarejsFuncCovCodeDiff.png)
+
+The log report of the new coverage tool:
+![Description of the image](https://github.com/cukibe123/SEP-Group-46/blob/main/minhimages/middlewarejsLogUncovered.png)
 
 ### Coverage Improvement
 
