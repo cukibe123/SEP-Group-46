@@ -290,6 +290,15 @@ The log from the implementation of the new coverage tool after the addition of t
 
 The coverage improvement of this function is 50% to 100%, as the function had been tested on 1 out of 2 branches. The newly added test made sure than both branches of this function are covered.
 
+### Overall
+
+The coverage improvement before adding new test cases:
+![before_overall](https://github.com/cukibe123/images/blob/main/overall%20before.jpg)
+
+The coverage improvement after adding new test cases:
+![after_overall](https://github.com/cukibe123/images/blob/main/overall%20after.jpg)
+
+
 ## Statement of individual contributions
 
 #### Tuan An Hoang
